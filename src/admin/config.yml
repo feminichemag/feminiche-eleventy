@@ -1,0 +1,140 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "essays"
+    label: "Essays"
+    folder: "src/essays"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Dek (subtitle or quote)", name: "dek", widget: "string", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false}
+      - {label: "Hero Image Caption", name: "heroImageCaption", widget: "string", required: false}
+      - {label: "Author Bio", name: "authorBio", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article.html"}
+      - {label: "Category", name: "category", widget: "hidden", default: "essays"}
+      - {label: "Category Label", name: "categoryLabel", widget: "hidden", default: "Essays"}
+
+  - name: "fiction"
+    label: "Fiction"
+    folder: "src/fiction"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Dek (subtitle or quote)", name: "dek", widget: "string", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false}
+      - {label: "Hero Image Caption", name: "heroImageCaption", widget: "string", required: false}
+      - {label: "Author Bio", name: "authorBio", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article.html"}
+      - {label: "Category", name: "category", widget: "hidden", default: "fiction"}
+      - {label: "Category Label", name: "categoryLabel", widget: "hidden", default: "Fiction"}
+
+  - name: "discourse"
+    label: "The Discourse"
+    folder: "src/discourse"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Dek (subtitle or quote)", name: "dek", widget: "string", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false}
+      - {label: "Hero Image Caption", name: "heroImageCaption", widget: "string", required: false}
+      - {label: "Author Bio", name: "authorBio", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article.html"}
+      - {label: "Category", name: "category", widget: "hidden", default: "discourse"}
+      - {label: "Category Label", name: "categoryLabel", widget: "hidden", default: "The Discourse"}
+
+  - name: "obsessions"
+    label: "Obsessions"
+    folder: "src/obsessions"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Dek (subtitle or quote)", name: "dek", widget: "string", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false}
+      - {label: "Hero Image Caption", name: "heroImageCaption", widget: "string", required: false}
+      - {label: "Author Bio", name: "authorBio", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article.html"}
+      - {label: "Category", name: "category", widget: "hidden", default: "obsessions"}
+      - {label: "Category Label", name: "categoryLabel", widget: "hidden", default: "Obsessions"}
+
+  - name: "interviews"
+    label: "Interviews"
+    folder: "src/interviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Dek (subtitle or quote)", name: "dek", widget: "string", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false}
+      - {label: "Hero Image Caption", name: "heroImageCaption", widget: "string", required: false}
+      - {label: "Author Bio", name: "authorBio", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article.html"}
+      - {label: "Category", name: "category", widget: "hidden", default: "interviews"}
+      - {label: "Category Label", name: "categoryLabel", widget: "hidden", default: "Interviews"}
+
+  - name: "reviews"
+    label: "Reviews"
+    folder: "src/reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Dek (subtitle or quote)", name: "dek", widget: "string", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false}
+      - {label: "Hero Image Caption", name: "heroImageCaption", widget: "string", required: false}
+      - {label: "Author Bio", name: "authorBio", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article.html"}
+      - {label: "Category", name: "category", widget: "hidden", default: "reviews"}
+      - {label: "Category Label", name: "categoryLabel", widget: "hidden", default: "Reviews"}
+
+  - name: "poetry"
+    label: "Poetry"
+    folder: "src/poetry"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Dek (subtitle or quote)", name: "dek", widget: "string", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false}
+      - {label: "Hero Image Caption", name: "heroImageCaption", widget: "string", required: false}
+      - {label: "Author Bio", name: "authorBio", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article.html"}
+      - {label: "Category", name: "category", widget: "hidden", default: "poetry"}
+      - {label: "Category Label", name: "categoryLabel", widget: "hidden", default: "Poetry"}

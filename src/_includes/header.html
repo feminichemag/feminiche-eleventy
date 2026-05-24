@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} — FemiNICHE</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="announcement">
+  <div class="announcement-track">
+    <div class="announcement-item">We&rsquo;re back <span class="announcement-dot">&middot;</span> <span>Submissions are open</span></div>
+    <div class="announcement-item"><span>Summer 2026</span></div>
+    <div class="announcement-item">By women. For everyone.</div>
+    <div class="announcement-item">Essays &middot; Reviews &middot; The Discourse <span class="announcement-dot">&middot;</span> <span>New this month</span></div>
+    <div class="announcement-item">Fiction &amp; Poetry <span class="announcement-dot">&middot;</span> <span>Submit your work</span></div>
+    <div class="announcement-item">We&rsquo;re back <span class="announcement-dot">&middot;</span> <span>Submissions are open</span></div>
+    <div class="announcement-item"><span>Summer 2026</span></div>
+    <div class="announcement-item">By women. For everyone.</div>
+    <div class="announcement-item">Essays &middot; Reviews &middot; The Discourse <span class="announcement-dot">&middot;</span> <span>New this month</span></div>
+    <div class="announcement-item">Fiction &amp; Poetry <span class="announcement-dot">&middot;</span> <span>Submit your work</span></div>
+  </div>
+</div>
+
+<header>
+  <div class="header-top">
+    <a href="/" class="logo">Femi<span>NICHE</span></a>
+    <span class="header-tagline">By women. For everyone.</span>
+    <div class="header-actions">
+      <div class="social-icons">
+        <a href="https://x.com/feminichemag" title="Twitter/X" target="_blank">&#120143;</a>
+        <a href="https://instagram.com/feminichemag" title="Instagram" target="_blank"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a>
+        <a href="mailto:feminichemag@gmail.com" title="Email">&#9993;</a>
+      </div>
+      <a href="feminiche-newsletter.beehiiv.com" target="_blank" class="btn-subscribe">Subscribe</a>
+      <a href="/submit" class="btn-submit">Submit</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav>
+    <span class="nav-category-label">Pop Culture</span>
+    <a href="/essays" {% if page.url == '/essays/' %}class="active"{% endif %}>Essays</a>
+    <a href="/reviews" {% if page.url == '/reviews/' %}class="active"{% endif %}>Reviews</a>
+    <a href="/discourse" {% if page.url == '/discourse/' %}class="active"{% endif %}>The Discourse</a>
+    <a href="/obsessions" {% if page.url == '/obsessions/' %}class="active"{% endif %}>Obsessions</a>
+    <a href="/interviews" {% if page.url == '/interviews/' %}class="active"{% endif %}>Interviews</a>
+    <span class="nav-category-label" style="margin-left:8px;">Creative Writing</span>
+    <a href="/fiction" {% if page.url == '/fiction/' %}class="active"{% endif %}>Fiction</a>
+    <a href="/poetry" {% if page.url == '/poetry/' %}class="active"{% endif %}>Poetry</a>
+    <a href="/contact" style="margin-left:auto; padding-right:0; border-right:none;">Contact</a>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/essays">Essays</a>
+    <a href="/reviews">Reviews</a>
+    <a href="/discourse">The Discourse</a>
+    <a href="/obsessions">Obsessions</a>
+    <a href="/interviews">Interviews</a>
+    <a href="/fiction">Fiction</a>
+    <a href="/poetry">Poetry</a>
+    <a href="/contact">Contact</a>
+    <a href="https://feminiche-newsletter.beehiiv.com" target="_blank" class="subscribe-link">Subscribe to Newsletter</a>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const mnav = document.getElementById('mobileNav');
+  btn.addEventListener('click', () => { btn.classList.toggle('open'); mnav.classList.toggle('open'); });
+  mnav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => { btn.classList.remove('open'); mnav.classList.remove('open'); });
+  });
+</script>

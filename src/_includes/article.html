@@ -1,0 +1,37 @@
+{% include "header.html" %}
+
+<div class="article-header">
+  <div class="article-breadcrumb">
+    <a href="/">Home</a>
+    <span class="article-breadcrumb-sep">/</span>
+    <a href="/{{ category }}">{{ categoryLabel }}</a>
+  </div>
+  <span class="article-kicker">{{ categoryLabel }}</span>
+  <h1 class="article-title">{{ title }}</h1>
+  {% if dek %}<p class="article-dek">{{ dek }}</p>{% endif %}
+  <div class="article-meta">
+    <span class="article-author">{{ author }}</span>
+    {% if role %}<span class="article-role">{{ role }}</span>{% endif %}
+    <span class="article-date">{{ date | readableDate }}</span>
+  </div>
+</div>
+
+{% if heroImage %}
+<div class="article-hero-image">
+  <img src="{{ heroImage }}" alt="{{ heroImageAlt }}" />
+  {% if heroImageCaption %}<p class="img-caption">{{ heroImageCaption }}</p>{% endif %}
+</div>
+{% endif %}
+
+<div class="article-body">
+  {{ content }}
+</div>
+
+{% if authorBio %}
+<div class="author-bio">
+  <div class="author-bio-label">About the Author</div>
+  <p class="author-bio-text">{{ authorBio }}</p>
+</div>
+{% endif %}
+
+{% include "footer.html" %}
